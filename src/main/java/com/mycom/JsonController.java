@@ -37,12 +37,15 @@ public class JsonController {
 //	tax_type : 부가가치세 일반과세자
 	
 	@PostMapping("/service")
-	public ResultDTO getService(@RequestBody Bno bNo) throws IOException {
+	public ResultDTO getService(Bno bNo) throws IOException {
 		ResultDTO dto = buisnessService.check(bNo);
 		return dto;
 	}
-//	POST :: http://localhost:8099/service :: Body { "b_no":"5298600830" }
+//	getService(@RequestBody Bno bNo)
+//	postman TEST :: POST :: http://localhost:8099/service :: Body { "b_no":"5298600830" }
 //	{ "tax_type": "국세청에 등록되지 않은 사업자등록번호입니다.",
 //	  "b_no": "5298600830" }
+	
+//	localhost:8099/check 
 
 }
